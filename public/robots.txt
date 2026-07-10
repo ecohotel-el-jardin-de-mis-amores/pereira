@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.ecohoteleljardindemisamores.com.co/sitemap.xml
