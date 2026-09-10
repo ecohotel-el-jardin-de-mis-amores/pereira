@@ -262,7 +262,7 @@ function PasadiasPage() {
       </section>
 
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton contentName="Pasadías" contentCategory="pasadias" source="flotante" />
     </main>
   );
 }

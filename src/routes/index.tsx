@@ -7,6 +7,7 @@ import { Location } from "@/components/landing/Location";
 import { WhatsAppButton } from "@/components/landing/WhatsAppButton";
 import { Gallery } from "@/components/landing/Gallery";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { track } from "@/lib/pixel";
 
 const cld = (id: string) =>
   `https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_1280/${id}`;
@@ -110,6 +111,19 @@ const sections: Section[] = [
 function Home() {
   const [active, setActive] = useState("alojamiento");
 
+  const handleTabChange = (value: string) => {
+    setActive(value);
+    // onValueChange de Radix Tabs solo dispara en cambios por interacción del
+    // usuario, no en el montaje inicial: no hace falta filtrar el tab por defecto.
+    const section = sections.find((s) => s.value === value);
+    if (section) {
+      track("ViewContent", {
+        content_name: section.title,
+        content_category: section.value,
+      });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
@@ -175,7 +189,7 @@ function Home() {
             </p>
           </div>
 
-          <Tabs value={active} onValueChange={setActive} className="mt-12">
+          <Tabs value={active} onValueChange={handleTabChange} className="mt-12">
             <TabsList className="mx-auto flex h-auto w-full max-w-3xl flex-wrap justify-center gap-2 rounded-2xl bg-background p-2 shadow-card">
               {sections.map((s) => {
                 const Icon = s.icon;
@@ -227,10 +241,17 @@ function Home() {
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                       
-                      <a  
+                      <a
                         href={waLink(`Hola, quiero más información sobre ${s.label}`)}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={() =>
+                          track("Lead", {
+                            content_name: s.title,
+                            content_category: s.value,
+                            source: "tab_experiencias",
+                          })
+                        }
                         className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-semibold hover:border-brand-green hover:text-brand-green"
                       >
                         <MessageCircle className="h-4 w-4" />
@@ -408,7 +429,7 @@ function Home() {
 
       <Location />
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton contentName="Home" contentCategory="home" source="flotante" />
     </main>
   );
 }

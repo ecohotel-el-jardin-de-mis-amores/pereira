@@ -6,6 +6,8 @@ import {
   useRouter,
   HeadContent,
 } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
+import { trackPageView } from "@/lib/pixel";
 
 function NotFoundComponent() {
   return (
@@ -58,6 +60,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const router = useRouter();
+  // El primer "onResolved" corresponde a la carga inicial, ya cubierta por el
+  // fbq('track', 'PageView') de index.html. Lo ignoramos para no duplicarlo y
+  // solo trackeamos las navegaciones siguientes (cambios de ruta en la SPA).
+  const isFirstResolve = useRef(true);
+
+  useEffect(() => {
+    return router.subscribe("onResolved", () => {
+      if (isFirstResolve.current) {
+        isFirstResolve.current = false;
+        return;
+      }
+      trackPageView();
+    });
+  }, [router]);
+
   return (
     <QueryClientProvider client={queryClient}>
       <HeadContent />

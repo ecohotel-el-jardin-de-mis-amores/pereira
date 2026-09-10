@@ -1,14 +1,33 @@
+import { track } from "@/lib/pixel";
+
 const PHONE = "573128993195";
 const MESSAGE = "Vengo de la página y quiero más información de los tours en cuatrimoto";
 
-export function WhatsAppButton() {
+type WhatsAppButtonProps = {
+  contentName: string;
+  contentCategory: string;
+  source: string;
+};
+
+export function WhatsAppButton({ contentName, contentCategory, source }: WhatsAppButtonProps) {
   const href = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
+
+  const handleClick = () => {
+    // No bloquea la navegación: solo dispara el evento, el <a> sigue su curso normal.
+    track("Lead", {
+      content_name: contentName,
+      content_category: contentCategory,
+      source,
+    });
+  };
+
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contáctanos por WhatsApp"
+      onClick={handleClick}
       className="fixed bottom-5 right-5 z-50 flex items-center gap-2 rounded-full bg-brand-green px-5 py-4 text-white shadow-card transition-transform hover:scale-105 active:scale-95"
     >
       <svg viewBox="0 0 24 24" className="h-6 w-6 fill-white" aria-hidden>

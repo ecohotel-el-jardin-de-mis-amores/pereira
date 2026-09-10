@@ -201,7 +201,7 @@ function ToursPage() {
       </section>
 
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton contentName="Tours en Cuatrimoto" contentCategory="tours" source="flotante" />
     </main>
   );
 }

@@ -304,7 +304,7 @@ function PlanesPage() {
       </section>
 
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton contentName="Planes Especiales" contentCategory="planes" source="flotante" />
     </div>
   );
 }
