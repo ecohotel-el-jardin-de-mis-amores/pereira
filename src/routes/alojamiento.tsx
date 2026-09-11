@@ -285,7 +285,7 @@ function AlojamientoPage() {
       </section>
 
       <Footer />
-      <WhatsAppButton />
+      <WhatsAppButton contentName="Alojamiento" contentCategory="alojamiento" source="flotante" />
     </main>
   );
 }
