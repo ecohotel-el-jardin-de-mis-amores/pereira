@@ -11,8 +11,10 @@ const navLinks = [
   { to: "/planes", label: "Planes" },
 ] as const;
 
-export function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+// solido: fondo claro desde el inicio, para páginas sin foto de portada.
+export function Navbar({ solido = false }: { solido?: boolean } = {}) {
+  const [haceScroll, setScrolled] = useState(false);
+  const scrolled = solido || haceScroll;
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -55,14 +57,13 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href="https://reservas.ecohoteleljardindemisamores.com.co"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/checkout"
+              search={{}}
               className="rounded-full bg-brand-green px-5 py-2 text-white shadow-card hover:brightness-105 transition"
             >
               Reservar
-            </a>
+            </Link>
           </nav>
 
           {/* Mobile hamburger */}
@@ -122,15 +123,14 @@ export function Navbar() {
                 {l.label}
               </Link>
             ))}
-            <a
-              href="https://reservas.ecohoteleljardindemisamores.com.co"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/checkout"
+              search={{}}
               onClick={() => setOpen(false)}
               className="mt-3 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
             >
               Reservar ahora
-            </a>
+            </Link>
           </div>
         </nav>
       </div>

@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { reservaDe } from "@/lib/catalogo";
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
 import { WhatsAppButton } from "@/components/landing/WhatsAppButton";
@@ -209,10 +210,10 @@ function PlanCard({ plan }: { plan: Plan }) {
           )}
         </div>
 
-        <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
+        <Link to="/checkout" search={reservaDe(plan.title)} className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110"
         >
           Reservar ahora
-        </a>
+        </Link>
       </div>
     </article>
   );
@@ -297,9 +298,9 @@ function PlanesPage() {
         <div className="mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl font-extrabold md:text-4xl">¿Listo para vivir la experiencia completa?</h2>
           <p className="mt-3 text-lg text-white/90">Te ayudamos a elegir el plan perfecto para tu escapada.</p>
-          <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-brand-green shadow-card transition hover:brightness-105">
+          <Link to="/checkout" search={{}} hash="plan" className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-base font-bold text-brand-green shadow-card transition hover:brightness-105">
             Reservar ahora
-          </a>
+          </Link>
         </div>
       </section>
 

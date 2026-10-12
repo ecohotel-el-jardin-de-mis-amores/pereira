@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { reservaDe } from "@/lib/catalogo";
 import { Shield, Clock, Users, MapPin, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -94,9 +95,9 @@ function ToursPage() {
             Ríos, cascadas y senderos del corredor turístico de Combia Baja. Guías expertos y equipo de seguridad incluido.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
+            <Link to="/checkout" search={{}} hash="tour" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
               Reservar un tour
-            </a>
+            </Link>
             <a href="#rutas" className="rounded-full border border-white/40 bg-white/10 px-7 py-3 font-semibold backdrop-blur-md transition hover:bg-white/20">
               Ver rutas
             </a>
@@ -177,9 +178,9 @@ function ToursPage() {
                     </div>
                   </div>
                 </div>
-                <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110">
+                <Link to="/checkout" search={reservaDe(t.title)} className="mt-4 inline-flex w-full items-center justify-center rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110">
                   Reservar
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -194,9 +195,9 @@ function ToursPage() {
           <p className="mt-3 max-w-xl text-white/90">
             Combia Baja, Pereira — A 40 minutos del aeropuerto Internacional Matecaña.
           </p>
-          <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
+          <Link to="/checkout" search={{}} hash="tour" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
             Reservar un tour
-          </a>
+          </Link>
         </div>
       </section>
 

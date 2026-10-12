@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { reservaDe } from "@/lib/catalogo";
 import {
   Wifi, Coffee, Bed, Mountain, Bath, Wine,
   Wind, ShieldCheck, Tent, Flame, Check,
@@ -133,9 +134,9 @@ function AlojamientoPage() {
             Habitaciones para parejas, familias y grupos. Cabañas y zona para camping bajo las estrellas.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
+            <Link to="/checkout" search={{}} hash="alojamiento" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
               Reservar ahora
-            </a>
+            </Link>
             <a href="#opciones" className="rounded-full border border-white/40 bg-white/10 px-7 py-3 font-semibold backdrop-blur-md transition hover:bg-white/20">
               Ver opciones
             </a>
@@ -172,9 +173,9 @@ function AlojamientoPage() {
                     <div className="mt-1 text-2xl font-bold">{r.price}</div>
                     <div className="text-xs text-muted-foreground">{r.unit}</div>
                   </div>
-                  <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110">
+                  <Link to="/checkout" search={reservaDe(r.title)} className="rounded-full bg-brand-green px-5 py-3 text-sm font-semibold text-white shadow-card transition hover:brightness-110">
                     Reservar ahora
-                  </a>
+                  </Link>
                 </div>
               </div>
             </article>
@@ -210,9 +211,9 @@ function AlojamientoPage() {
                     <div className="mt-1 text-2xl font-bold">{r.price}</div>
                     <div className="text-xs text-muted-foreground">{r.unit}</div>
                   </div>
-                  <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 font-semibold text-white shadow-card transition hover:brightness-110">
+                  <Link to="/checkout" search={reservaDe(r.title)} className="mt-5 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 font-semibold text-white shadow-card transition hover:brightness-110">
                     Reservar ahora
-                  </a>
+                  </Link>
                 </div>
               </article>
             ))}
@@ -265,9 +266,9 @@ function AlojamientoPage() {
               <span className="text-3xl font-extrabold text-brand-green">$35.000</span>
               <span className="text-sm text-muted-foreground">por persona / noche</span>
             </div>
-            <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex w-fit items-center justify-center rounded-full bg-brand-green px-6 py-3 font-semibold text-white shadow-card transition hover:brightness-110">
+            <Link to="/checkout" search={reservaDe("Zona para Camping")} className="mt-7 inline-flex w-fit items-center justify-center rounded-full bg-brand-green px-6 py-3 font-semibold text-white shadow-card transition hover:brightness-110">
               Reservar ahora
-            </a>
+            </Link>
           </div>
         </div>
         <Gallery images={[IMGS.campingP, IMGS.camping1, IMGS.camping2]} alt="Zona para camping" />
@@ -278,9 +279,9 @@ function AlojamientoPage() {
         <div className="mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
           <h2 className="text-balance text-3xl font-bold md:text-4xl">¿Listo para hospedarte con nosotros?</h2>
           <p className="mt-3 max-w-xl text-white/90">Reserva ahora y recibe confirmación inmediata.</p>
-          <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
+          <Link to="/checkout" search={{}} hash="alojamiento" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
             Reservar ahora
-          </a>
+          </Link>
         </div>
       </section>
 
