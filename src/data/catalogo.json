@@ -1,0 +1,193 @@
+{
+  "anticipo": 0.5,
+  "servicios": [
+    {
+      "id": "pasadia-sin-cuatrimoto",
+      "categoria": "pasadia",
+      "titulo": "Pasadía sin Cuatrimoto",
+      "resumen": "8 horas · 9:00 a.m. – 5:00 p.m.",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/pasadia_sin_cuatrimoto_z9v1hf",
+      "cobro": "persona",
+      "adulto": 72900,
+      "nino": 62900
+    },
+    {
+      "id": "pasadia-guayabo",
+      "categoria": "pasadia",
+      "titulo": "Pasadía + Cuatrimoto El Guayabo",
+      "resumen": "8 horas · 1½ h de tour en cuatrimoto",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/pasadia_cuatrimoto_El_guayabo_principal_fdyl1i",
+      "cobro": "persona",
+      "adulto": 166900,
+      "nino": 136900
+    },
+    {
+      "id": "pasadia-rio-argentina",
+      "categoria": "pasadia",
+      "titulo": "Pasadía + Cuatrimoto Río La Argentina",
+      "resumen": "8 horas · 2½ h de tour en cuatrimoto",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/Pasadia__rio_la_argentina_principal_dzehyj",
+      "cobro": "persona",
+      "adulto": 226000,
+      "nino": 176000
+    },
+    {
+      "id": "pasadia-cascadas",
+      "categoria": "pasadia",
+      "titulo": "Pasadía + Cuatrimoto a Las Cascadas",
+      "resumen": "6 horas de aventura completa",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/pasadia_las_cascadas_principal_ymsqxo",
+      "cobro": "persona",
+      "adulto": 316000,
+      "nino": 226000
+    },
+    {
+      "id": "plan-pareja-guayabo",
+      "categoria": "plan",
+      "titulo": "Plan Pareja — Ruta El Guayabo",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (1½ h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_pareja_ruta_el_guayabo_1_lremda",
+      "cobro": "pareja",
+      "precio": 580000
+    },
+    {
+      "id": "plan-pareja-rio-argentina",
+      "categoria": "plan",
+      "titulo": "Plan Pareja — Río La Argentina",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (2½ h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_pareja_ruta_la_argentina_1_ach2jw",
+      "cobro": "pareja",
+      "precio": 772000
+    },
+    {
+      "id": "plan-pareja-cascadas",
+      "categoria": "plan",
+      "titulo": "Plan Pareja — Cascadas",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (6 h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_pareja_ruta_la_cascada_1_w7x10v",
+      "cobro": "pareja",
+      "precio": 952000
+    },
+    {
+      "id": "plan-familia-guayabo",
+      "categoria": "plan",
+      "titulo": "Familia / Amigos — Ruta El Guayabo",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (1½ h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_familia_y_amigos_ruta_el_guayabo_1_dmklna",
+      "cobro": "persona",
+      "adulto": 290000,
+      "nino": 257000
+    },
+    {
+      "id": "plan-familia-rio-argentina",
+      "categoria": "plan",
+      "titulo": "Familia / Amigos — Río La Argentina",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (2½ h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_familia_y_amigos_ruta_la_argentina_1_d6pwjm",
+      "cobro": "persona",
+      "adulto": 367000,
+      "nino": 301000
+    },
+    {
+      "id": "plan-familia-cascadas",
+      "categoria": "plan",
+      "titulo": "Familia / Amigos — Cascadas",
+      "resumen": "1 noche + comidas + tour en cuatrimoto (6 h)",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/plan_completo_familia_y_amigos_ruta_la_cascada_1_lqdmka",
+      "cobro": "persona",
+      "adulto": 465000,
+      "nino": 395000
+    },
+    {
+      "id": "tour-guayabo",
+      "categoria": "tour",
+      "titulo": "Ruta El Guayabo",
+      "resumen": "Tour en cuatrimoto · 1½ horas",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/tour_cuatri_el_Guayabo_principal_njnyzq",
+      "cobro": "persona",
+      "adulto": 99000,
+      "nino": 66000,
+      "maxPersonas": 6
+    },
+    {
+      "id": "tour-rio-argentina",
+      "categoria": "tour",
+      "titulo": "Ruta Río La Argentina",
+      "resumen": "Tour en cuatrimoto · 2½ horas",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/tour_cuatrimoto_rio_la_argentina_principal_xcmad1",
+      "cobro": "persona",
+      "adulto": 176000,
+      "nino": 110000,
+      "maxPersonas": 6
+    },
+    {
+      "id": "tour-cascadas",
+      "categoria": "tour",
+      "titulo": "Ruta Las Cascadas",
+      "resumen": "Tour en cuatrimoto · 6 horas",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/v1782675981/tour_cuatrimoto_las_cascadas_principal_nxmmux.jpg",
+      "cobro": "persona",
+      "adulto": 296000,
+      "nino": 226000,
+      "maxPersonas": 6
+    },
+    {
+      "id": "habitacion-colina",
+      "categoria": "alojamiento",
+      "titulo": "Habitación Colina",
+      "resumen": "Para pareja · vista a la montaña",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/habitacion_colina_parejas_principal_yxismj",
+      "cobro": "noche-pareja",
+      "precio": 289000
+    },
+    {
+      "id": "habitacion-colonial",
+      "categoria": "alojamiento",
+      "titulo": "Habitación Colonial",
+      "resumen": "Para pareja · estilo colonial cafetero",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/habitacion_colonial_parejas_principal_fn6ax1",
+      "cobro": "noche-pareja",
+      "precio": 289000
+    },
+    {
+      "id": "habitacion-campestre",
+      "categoria": "alojamiento",
+      "titulo": "Habitación Campestre",
+      "resumen": "Para familias y grupos",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/habitacion_campestre_multiple_principal_nuunz7",
+      "cobro": "noche-persona",
+      "precio": 110000,
+      "minPersonas": 1
+    },
+    {
+      "id": "habitacion-cafetera",
+      "categoria": "alojamiento",
+      "titulo": "Habitación Cafetera",
+      "resumen": "Para familias y grupos",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/habitacion_cafetera_multiple_principal_htwv81",
+      "cobro": "noche-persona",
+      "precio": 110000,
+      "minPersonas": 1
+    },
+    {
+      "id": "la-cabana",
+      "categoria": "alojamiento",
+      "titulo": "La Cabaña",
+      "resumen": "Desde 3 personas · altillo y domo",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/cabana_1_cokt3n",
+      "cobro": "noche-persona",
+      "precio": 169500,
+      "minPersonas": 3
+    },
+    {
+      "id": "camping",
+      "categoria": "alojamiento",
+      "titulo": "Zona para Camping",
+      "resumen": "Trae tu carpa · zona de fogata",
+      "imagen": "https://res.cloudinary.com/dtymrddlg/image/upload/q_auto,f_auto,w_800/Zona_de_camping_q9t44e",
+      "cobro": "noche-persona",
+      "precio": 35000,
+      "minPersonas": 1
+    }
+  ]
+}

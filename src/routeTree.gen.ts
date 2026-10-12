@@ -15,6 +15,7 @@ import { Route as PrivacidadRouteImport } from './routes/privacidad'
 import { Route as PlanesRouteImport } from './routes/planes'
 import { Route as PasadiasRouteImport } from './routes/pasadias'
 import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as CheckoutRouteImport } from './routes/checkout'
 import { Route as AlojamientoRouteImport } from './routes/alojamiento'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -48,6 +49,11 @@ const CookiesRoute = CookiesRouteImport.update({
   path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AlojamientoRoute = AlojamientoRouteImport.update({
   id: '/alojamiento',
   path: '/alojamiento',
@@ -62,6 +68,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/alojamiento': typeof AlojamientoRoute
+  '/checkout': typeof CheckoutRoute
   '/cookies': typeof CookiesRoute
   '/pasadias': typeof PasadiasRoute
   '/planes': typeof PlanesRoute
@@ -72,6 +79,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/alojamiento': typeof AlojamientoRoute
+  '/checkout': typeof CheckoutRoute
   '/cookies': typeof CookiesRoute
   '/pasadias': typeof PasadiasRoute
   '/planes': typeof PlanesRoute
@@ -83,6 +91,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/alojamiento': typeof AlojamientoRoute
+  '/checkout': typeof CheckoutRoute
   '/cookies': typeof CookiesRoute
   '/pasadias': typeof PasadiasRoute
   '/planes': typeof PlanesRoute
@@ -95,6 +104,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/alojamiento'
+    | '/checkout'
     | '/cookies'
     | '/pasadias'
     | '/planes'
@@ -105,6 +115,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/alojamiento'
+    | '/checkout'
     | '/cookies'
     | '/pasadias'
     | '/planes'
@@ -115,6 +126,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/alojamiento'
+    | '/checkout'
     | '/cookies'
     | '/pasadias'
     | '/planes'
@@ -126,6 +138,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AlojamientoRoute: typeof AlojamientoRoute
+  CheckoutRoute: typeof CheckoutRoute
   CookiesRoute: typeof CookiesRoute
   PasadiasRoute: typeof PasadiasRoute
   PlanesRoute: typeof PlanesRoute
@@ -178,6 +191,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/alojamiento': {
       id: '/alojamiento'
       path: '/alojamiento'
@@ -198,6 +218,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AlojamientoRoute: AlojamientoRoute,
+  CheckoutRoute: CheckoutRoute,
   CookiesRoute: CookiesRoute,
   PasadiasRoute: PasadiasRoute,
   PlanesRoute: PlanesRoute,

@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { reservaDe } from "@/lib/catalogo";
 import { Waves, Mountain, Trophy, Bird, PawPrint, Hammer, Check } from "lucide-react";
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
@@ -139,9 +140,9 @@ function PasadiasPage() {
             Pareja, familia o amigos. Elige tu plan: piscina, mirador, almuerzo y aventura en cuatrimoto incluida.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
+            <Link to="/checkout" search={{}} hash="pasadia" className="rounded-full bg-brand-green px-7 py-3 font-semibold shadow-card transition hover:brightness-110">
               Reservar pasadía
-            </a>
+            </Link>
             <a href="#planes" className="rounded-full border border-white/40 bg-white/10 px-7 py-3 font-semibold backdrop-blur-md transition hover:bg-white/20">
               Ver planes
             </a>
@@ -187,14 +188,13 @@ function PasadiasPage() {
                     <div className="mt-1 text-xl font-bold">{p.kid}</div>
                   </div>
                 </div>
-                <a
-                  href="https://reservas.ecohoteleljardindemisamores.com.co"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/checkout"
+                  search={reservaDe(p.title)}
                   className="mt-6 inline-flex items-center justify-center rounded-full bg-brand-green px-5 py-3 font-semibold text-white shadow-card transition hover:brightness-110"
                 >
                   Reservar ahora
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -255,9 +255,9 @@ function PasadiasPage() {
           <p className="mt-3 max-w-xl text-white/90">
             Reserva y recibe asesoría inmediata sobre tarifas especiales para grupos y niños.
           </p>
-          <a href="https://reservas.ecohoteleljardindemisamores.com.co" target="_blank" rel="noopener noreferrer" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
+          <Link to="/checkout" search={{}} hash="pasadia" className="mt-6 rounded-full bg-white px-8 py-3 font-semibold text-brand-green shadow-card transition hover:scale-105">
             Reservar ahora
-          </a>
+          </Link>
         </div>
       </section>
 
