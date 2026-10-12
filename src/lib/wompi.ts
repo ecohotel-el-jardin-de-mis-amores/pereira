@@ -8,8 +8,9 @@
 // 3. Wompi avisa a n8n (evento firmado) y n8n confirma la reserva y envía los
 //    WhatsApp. Lo que diga el navegador nunca confirma una reserva.
 
-// Webhook de n8n "Jardin - Reserva Wompi" (no es un secreto).
-export const RESERVA_URL = "https://app-n8n-n8n.f5c8zw.easypanel.host/webhook/jardin-reserva-wompi";
+// Webhook de n8n "Jardin - Reserva Wompi (crear)" (no es un secreto).
+export const RESERVA_URL =
+  "https://app-n8n-n8n.f5c8zw.easypanel.host/webhook/28aea092-f819-4cbb-829b-59261f6ec418/jardin-reserva-wompi";
 
 const WIDGET_SRC = "https://checkout.wompi.co/widget.js";
 
